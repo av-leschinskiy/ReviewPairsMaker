@@ -6,6 +6,14 @@
         {
             var originalArray = GetStudents();
             var middleIndex = originalArray.Length / 2;
+            var secondHalfArray = GetSecondHalfArray(originalArray, middleIndex);
+            Console.Clear();
+
+            for (var lesson = 1; lesson <= 20; lesson++)
+            {
+                Console.WriteLine($"Урок: {lesson}");
+
+            }
         }
 
         static string[] GetSecondHalfArray(string[] originalArray, int middleIndex)
