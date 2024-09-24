@@ -18,6 +18,18 @@
             }
         }
 
+        static string[] GetShiftedSecondArray(string[] array)
+        {
+            var shiftedArray = new string[array.Length];
+
+            shiftedArray[0] = array[array.Length - 1];
+
+            for (int i = 0; i < array.Length - 1; i++)
+                shiftedArray[i + 1] = array[i];
+
+            return shiftedArray;
+        }
+
         static void PrintReviewPairsForLesson(string[] originalArray, string[] secondHalfArray, int middleIndex)
         {
             for (var i = 0; i < middleIndex; i++)
