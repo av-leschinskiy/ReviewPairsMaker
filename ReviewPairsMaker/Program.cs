@@ -12,6 +12,10 @@
             for (var lesson = 1; lesson <= 20; lesson++)
             {
                 Console.WriteLine($"Урок: {lesson}");
+
+                if (lesson > 1)
+                    secondHalfArray = GetShiftedSecondArray(secondHalfArray);
+
                 PrintReviewPairsForLesson(originalArray, secondHalfArray, middleIndex);
 
                 Console.WriteLine("---------------------------------------------------");
