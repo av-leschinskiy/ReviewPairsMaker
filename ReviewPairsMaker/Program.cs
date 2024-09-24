@@ -12,7 +12,21 @@
             for (var lesson = 1; lesson <= 20; lesson++)
             {
                 Console.WriteLine($"Урок: {lesson}");
+                PrintReviewPairsForLesson(originalArray, secondHalfArray, middleIndex);
 
+                Console.WriteLine("---------------------------------------------------");
+            }
+        }
+
+        static void PrintReviewPairsForLesson(string[] originalArray, string[] secondHalfArray, int middleIndex)
+        {
+            for (var i = 0; i < middleIndex; i++)
+            {
+                var student1 = originalArray[i];
+                var student2 = secondHalfArray[i];
+
+                var reviewPair = $"{student1} <-> {student2}";
+                Console.WriteLine(reviewPair);
             }
         }
 
